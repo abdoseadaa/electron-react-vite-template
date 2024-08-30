@@ -12,7 +12,7 @@
     "dev:main": "cross-env NODE_ENV=development concurrently \"npm run watch:main\" \"electronmon .\"",
     "dev:renderer": "npm run dev:renderer:frontend",
     "dev:renderer:frontend": "npm run dev --prefix frontend",
-    "dev": "concurrently \"npm run dev:main\" \"npm run dev:renderer\"",
+    "dev": "npm run build:main && concurrently \"npm run dev:main\" \"npm run dev:renderer\"",
     "prestart": "npm run build"
   },
   "keywords": [],
