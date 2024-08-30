@@ -1,0 +1,30 @@
+{
+  "name": "electron-react-vite-template",
+  "version": "1.0.0",
+  "main": "main.js",
+  "productName": "template",
+  "scripts": {
+    "start": "concurrently \"cross-env NODE_ENV=production npm run build:main\" \"npm run dev:renderer\"",
+    "build": "npm run build:main && npm run build:renderer",
+    "build:main": "npx tsc -p .",
+    "build:renderer": "npm run build --prefix frontend",
+    "watch:main": "npx tsc -p . --watch",
+    "dev:main": "cross-env NODE_ENV=development concurrently \"npm run watch:main\" \"electronmon .\"",
+    "dev:renderer": "npm run dev:renderer:frontend",
+    "dev:renderer:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run dev:main\" \"npm run dev:renderer\"",
+    "prestart": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^32.0.1",
+    "electronmon": "^2.0.3",
+    "typescript": "^5.5.4",
+    "wait-on": "^8.0.0"
+  }
+}
