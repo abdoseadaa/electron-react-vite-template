@@ -1,4 +1,4 @@
-
+# بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
 # Electron-React-Vite Template
 
 This is a project template for creating desktop applications using Electron, React, and Vite with TypeScript. It provides a modern development environment with hot-reloading for both the main and renderer processes, making it easier to build, test, and deploy Electron applications.
